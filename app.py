@@ -38,7 +38,6 @@ def do_httpresponse():
 def do_code():
     data = request.body
     data = data.read().decode('utf-8')
-    print(data)
     if data != 'code':
         abort(499,'your request is not code')
     return 'code test'
