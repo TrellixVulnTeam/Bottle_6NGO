@@ -39,11 +39,11 @@ def do_code():
     data = request.body
     data = data.read().decode('utf-8')
     if data != 'code':
-        abort(499,'your request is not code')
+        abort(498,'your request is not code')
     return 'code test'
 
 
-@error(499)
+@error(498)
 def error499(error):
     return error.body
 
