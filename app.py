@@ -27,7 +27,7 @@ def do_abort():
 @route('/httpresponse',method='POST')
 def do_httpresponse():
     data = request.body
-    data = data.read()
+    data = data.read().decode('utf-8')
     if data!='httpresponse':
         return HTTPResponse(body='your request is not httpresponse',status=400)
     return 'httpresponse test'
