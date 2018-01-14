@@ -28,6 +28,7 @@ def do_abort():
 def do_httpresponse():
     data = request.body
     data = data.read().decode('utf-8')
+    print(data)
     if data!='httpresponse':
         return HTTPResponse(body='your request is not httpresponse',status=400)
     return 'httpresponse test'
